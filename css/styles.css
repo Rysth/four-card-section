@@ -90,7 +90,7 @@ header p {
 main {
   display: flex;
   gap: 1.8rem;
-  width: min(75%, 1000px);
+  width: min(80%, 1000px);
   margin: 4rem auto;
   border-radius: 10px;
   align-items: center;
