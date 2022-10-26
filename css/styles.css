@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+  --CL-red: hsl(0, 78%, 62%);
+  --CL-cyan: hsl(180, 62%, 55%);
+  --CL-orange: hsl(34, 97%, 64%);
+  --CL-blue: hsl(212, 86%, 64%);
+
+  --CL-dark-blue: hsl(234, 12%, 34%);
+  --CL-grayish-blue: hsl(229, 6%, 66%);
+  --CL-light-gray: hsl(0, 0%, 98%);
+
+  --TCL-dark-blue: rgb(76,78,97, 0.2);
+
+  --FF-poppins: "Poppins", sans-serif;
+
+  --FW-light: 200;
+  --FW-normal: 400;
+  --FW-bold: 600;
+
+  --FS-title: clamp(1.6rem, 1.3rem + 1vw, 2.3rem);
+  --FS-subtitle: clamp(0.8rem, 0.8rem + 2vw, 1.2rem);
+  --FS-paragraph: clamp(1rem, 0.5rem + 1vw, 1.05rem);
+  --FS-description: clamp(0.8rem, 0.5rem + 1vw, 0.9rem);
+}
+
+*,
+*::before,
+*::after,
+html {
+  box-sizing: border-box;
+  font-size: 15px;
+  font-family: var(--FF-poppins);
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: var(--CL-light-gray);
+}
+
+@media (min-width: 375px) {
+  body {
+    height: initial;
+    padding: 3rem 0;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.color-dark-blue {
+  color: var(--CL-dark-blue);
+}
+
+.color-grayish-blue {
+  color: var(--CL-grayish-blue);
+}
+
+header {
+  display: block;
+  margin: 0 auto;
+  /*min: Set the maximum value between TWO values.*/
+  width: min(80vw, 1200px);
+}
+
+header h1,
+header h2 {
+  font-size: var(--FS-title);
+}
+
+header h1 {
+  font-weight: var(--FW-light);
+  margin-bottom: 0;
+}
+
+header h2 {
+  font-weight: var(--FW-bold);
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+header p {
+  margin: 0 auto;
+  font-size: var(--FS-paragraph);
+  width: min(100%, 550px);
+}
+
+main {
+  display: flex;
+  gap: 1.8rem;
+  width: min(75%, 1000px);
+  margin: 4rem auto;
+  border-radius: 10px;
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
+  main {
+    flex-direction: column;
+  }
+}
+
+/* CARD COMPONENT - LINE COLORS */
+
+.colored-line {
+  outline: 4px solid;
+}
+
+.card-component .color-red {
+  outline-color: var(--CL-red);
+}
+
+.card-component .color-cyan {
+  outline-color: var(--CL-cyan);
+}
+
+.card-component .color-orange {
+  outline-color: var(--CL-orange);
+}
+
+.card-component .color-blue {
+  outline-color: var(--CL-blue);
+}
+
+.card-component {
+  overflow: hidden;
+  border-radius: inherit;
+  box-shadow: 0 10px 20px var(--TCL-dark-blue);
+  width: min(100%, 500px);
+  height: min(100%, 200px);
+}
+
+.middle-column{
+  display: inherit;
+  border-radius: inherit;
+  flex-direction: column;
+  gap: 1.8rem;
+  width: min(100%, 500px);
+}
+
+.card-content {
+  padding: min(8%, 1rem) min(8%, 2rem);
+}
+
+.card-content h3 {
+  font-size: var(--FS-subtitle);
+  margin-block: 0.5rem;
+}
+
+.card-content p {
+  margin-top: 0;
+  font-size: var(--FS-description);
+  line-height: 1.8;
+}
+
+.card-content img {
+  display: block;
+  float: right;
+  margin-block: 1.5rem;
+  width: min(20%, 5rem);
+}
